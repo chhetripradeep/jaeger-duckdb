@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/proto"
-	"github.com/hashicorp/go-hclog"
+	hclog "github.com/hashicorp/go-hclog"
 	"github.com/jaegertracing/jaeger/model"
 	"github.com/jaegertracing/jaeger/storage/spanstore"
 )
