@@ -1,6 +1,6 @@
 GO_OS ?= $(shell go env GOOS)
 GO_ARCH ?= $(shell go env GOARCH)
-GO_BUILD ?= CGO_LDFLAGS="-L/Users/pradeep/gh/duckdb/build/release/src" CGO_CFLAGS="-I/Users/pradeep/gh/duckdb/src/include" DYLD_LIBRARY_PATH="/Users/pradeep/gh/duckdb/build/release/src" go build -trimpath
+GO_BUILD ?= CGO_ENABLED=1 go build -trimpath
 
 JAEGER_VERSION ?= 1.38.0
 
