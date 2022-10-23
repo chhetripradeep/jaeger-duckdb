@@ -1,4 +1,4 @@
-CREATE VIEW jaeger_operations 
+CREATE OR REPLACE VIEW jaeger_operations
 AS
 SELECT
     CAST(timestamp AS DATE) AS date,
