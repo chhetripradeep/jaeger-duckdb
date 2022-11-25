@@ -6,7 +6,7 @@ require (
 	github.com/gogo/protobuf v1.3.2
 	github.com/hashicorp/go-hclog v1.3.1
 	github.com/jaegertracing/jaeger v1.38.1
-	github.com/marcboeker/go-duckdb v1.0.5
+	github.com/marcboeker/go-duckdb v1.0.6
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/stretchr/testify v1.8.0
 	gopkg.in/yaml.v3 v3.0.1
