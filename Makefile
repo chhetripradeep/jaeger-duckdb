@@ -2,7 +2,7 @@ GO_OS ?= $(shell go env GOOS)
 GO_ARCH ?= $(shell go env GOARCH)
 GO_BUILD ?= CGO_ENABLED=1 go build -trimpath
 
-JAEGER_VERSION ?= 1.38.1
+JAEGER_VERSION ?= 1.40.0
 
 .PHONY: build
 build:
