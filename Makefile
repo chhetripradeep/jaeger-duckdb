@@ -2,7 +2,7 @@ GO_OS ?= $(shell go env GOOS)
 GO_ARCH ?= $(shell go env GOARCH)
 GO_BUILD ?= CGO_ENABLED=1 go build -trimpath
 
-JAEGER_VERSION ?= 1.40.0
+JAEGER_VERSION ?= 1.41.0
 
 .PHONY: build
 build:
@@ -30,7 +30,7 @@ build-all-platforms: build-linux-amd64 build-linux-arm64 build-darwin-amd64 buil
 .PHONY: fmt
 fmt: install-tools
 	go fmt ./...
-	goimports -w -local github.com/jaegertracing/jaeger-clickhouse ./
+	goimports -w -local github.com/jaegertracing/jaeger-duckdb ./
 
 .PHONY: install-tools
 install-tools:
@@ -75,3 +75,8 @@ run-hotrod:
 .PHONY: test
 test:
 	go test ./...
+
+.PHONY: upgrade-deps
+upgrade-deps:
+	go get -u ./...
+	go mod tidy
